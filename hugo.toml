@@ -1,0 +1,3 @@
+theme = 'ananke'
+baseURL = 'https://jasonlunder.com'
+languageCode = 'en-us'
