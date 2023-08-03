@@ -16,10 +16,10 @@ Research Assistant for a Gonzaga University sponsored Tripping Hazard Detection 
 
 ## Projects
 I build models and infrastructure for machine learning systems, including:    
-  * A system of various CV models for assisting pathologists diagnosing cancer
-  * A novel lemma dependency tree based machine translation model
-  * A model for detecting if a research paper's abstract is AI generated
-  * A system for detecting tripping hazards with a Microsoft Hololens v2
+  - A system of various CV models for assisting pathologists diagnosing cancer    
+  - A novel lemma dependency tree based machine translation model    
+  - A model for detecting if a research paper's abstract is AI generated    
+  - A system for detecting tripping hazards with a Microsoft Hololens v2    
 
 I led the Gonzaga Robotics Computer Science and Machine Learning team in designing and developing a control system for a mars rover
 I contributed to the 2022 ACROBAT Grand Challenge winning image registration model for histology images    
