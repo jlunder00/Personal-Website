@@ -4,7 +4,7 @@ date: 2023-08-03T11:44:58-07:00
 draft: false
 ---
 ## Jason Lunder
-[jlunder@zagmail.gonzaga.edu](jlunder@zagmail.gonzaga.edu) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)
+[jlunder@zagmail.gonzaga.edu](mailto:jlunder@zagmail.gonzaga.edu) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)
 
 I graduated in Computer Science and Mathematics from Gonzaga University in May 2023 and have experience in cutting edge AI Research.    
 Most recently, I worked as a Machine Learning/Data Science intern at Gestalt Diagnostics.    
