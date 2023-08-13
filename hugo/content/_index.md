@@ -4,6 +4,7 @@ date: 2023-08-03T11:44:58-07:00
 draft: false
 ---
 ## Jason Lunder
+[jlunder@zagmail.gonzaga.edu](jlunder@zagmail.gonzaga.edu) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)
 
 I graduated in Computer Science and Mathematics from Gonzaga University in May 2023 and have experience in cutting edge AI Research.    
 Most recently, I worked as a Machine Learning/Data Science intern at Gestalt Diagnostics.    
@@ -25,4 +26,5 @@ I led the Gonzaga Robotics Computer Science and Machine Learning team in designi
 I contributed to the 2022 ACROBAT Grand Challenge winning image registration model for histology images    
 I developed an RPA based system for automating IT processes at Lynden Inc.     
 I helped organize one of the largest online communities in Gonzaga University history
+
 
