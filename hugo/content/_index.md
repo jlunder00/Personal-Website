@@ -4,7 +4,7 @@ date: 2024-06-014T02:26:58-07:00
 draft: false
 ---
 ## Jason Lunder
-[jlunder@zagmail.gonzaga.edu](mailto:jlunder@zagmail.gonzaga.edu) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)
+[jlunder@zagmail.gonzaga.edu](mailto:jlunder@zagmail.gonzaga.edu) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)    
 VP of Engineering at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [console.intellipat.ai](https://console.intellipat.ai)\)    
 
 At Intellipat, I lead the development of AI and software systems to build AI products for patents and intellectual property law.    
@@ -21,11 +21,11 @@ Research Assistant at the Gonzaga University Center for Complex Systems
 
 ## Projects
 I build models and infrastructure for machine learning systems, including:   
-  - A system for determining if an invention is novel in the context of all patents
+  - A system for determining if an invention is novel in the context of all patents    
   - A system of various CV models for assisting pathologists diagnosing cancer    
   - A novel lemma dependency tree based machine translation model    
 
-I led the Gonzaga Robotics Computer Science and Machine Learning team in designing and developing a control system for a mars rover
+I led the Gonzaga Robotics Computer Science and Machine Learning team in designing and developing a control system for a mars rover    
 I contributed to the 2022 ACROBAT Grand Challenge winning image registration model for histology images    
 I developed an RPA based system for automating IT processes at Lynden Inc.     
 I helped organize one of the largest online communities in Gonzaga University history
