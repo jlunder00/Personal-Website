@@ -14,8 +14,8 @@ During my undergrad, I worked as a Machine Learning/Data Science intern at Gesta
 In my spare time, I work on a variety of projects in NLP, CV, and other areas of ML/AI, including at [Parsimony](https://p7y.ai)    
 
 ## Experience
-VP of Engineering at Intellipat Inc.
-Lead Software/ML Engineer at Pangeon Corp.
+VP of Engineering at Intellipat Inc.    
+Lead Software/ML Engineer at Pangeon Corp.    
 Machine Learning / Data Science Intern at Gestalt Diagnostics    
 Research Assistant at the Gonzaga University Center for Complex Systems    
 
