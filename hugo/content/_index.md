@@ -17,6 +17,7 @@ In my spare time, I work on a variety of projects in NLP, CV, and other areas of
 ## Experience
 Lead Developer at Intellipat Inc.    
 Lead Software/ML Engineer at Pangeon Corp.    
+Team Lead at Parsimony    
 Machine Learning / Data Science Intern at Gestalt Diagnostics    
 Research Assistant at the Gonzaga University Center for Complex Systems    
 
