@@ -1,20 +1,21 @@
 ---
 Title: "Jason Lunder"
-date: 2024-06-014T02:26:58-07:00
+date: 2024-10-254T02:26:58-07:00
 draft: false
 ---
 ## Jason Lunder
-[jlunder@zagmail.gonzaga.edu](mailto:jlunder@zagmail.gonzaga.edu) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)    
-VP of Engineering at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [console.intellipat.ai](https://console.intellipat.ai)\)    
+[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)    
+Lead Developer at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [console.intellipat.ai](https://console.intellipat.ai)\)    
 
 At Intellipat, I lead the development of AI and software systems to build AI products for patents and intellectual property law.    
     
-I graduated from Gonzaga University with a BS in Computer Science and a BS in Mathematics in May 2023.   
+I graduated from Gonzaga University with a BS in Computer Science and a BS in Mathematics in May 2023.
 During my undergrad, I worked as a Machine Learning/Data Science intern at Gestalt Diagnostics.    
+I am currently pursuing a MS in Computer Science at Eastern Washington University    
 In my spare time, I work on a variety of projects in NLP, CV, and other areas of ML/AI, including at [Parsimony](https://p7y.ai)    
 
 ## Experience
-VP of Engineering at Intellipat Inc.    
+Lead Developer at Intellipat Inc.    
 Lead Software/ML Engineer at Pangeon Corp.    
 Machine Learning / Data Science Intern at Gestalt Diagnostics    
 Research Assistant at the Gonzaga University Center for Complex Systems    
