@@ -9,9 +9,9 @@ Lead Developer at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [co
 
 At Intellipat, I lead the development of AI and software systems to build AI products for patents and intellectual property law.    
     
-I graduated from Gonzaga University with a BS in Computer Science and a BS in Mathematics in May 2023.
+I graduated from Gonzaga University with a BS in Computer Science and a BS in Mathematics in May 2023.    
 During my undergrad, I worked as a Machine Learning/Data Science intern at Gestalt Diagnostics.    
-I am currently pursuing a MS in Computer Science at Eastern Washington University    
+I am currently pursuing a MS in Computer Science at Eastern Washington University.    
 In my spare time, I work on a variety of projects in NLP, CV, and other areas of ML/AI, including at [Parsimony](https://p7y.ai)    
 
 ## Experience
