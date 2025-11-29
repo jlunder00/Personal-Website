@@ -4,7 +4,7 @@ date: 2024-11-28T00:00:00-07:00
 draft: false
 ---
 ## Jason Lunder
-[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/)    
+[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [CV](/Jason_Lunder_CV.pdf)    
 Founding Software/ML Engineer at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [console.intellipat.ai](https://console.intellipat.ai)\)    
 
 At Intellipat, I build AI and software systems for patents and intellectual property law.    
@@ -21,7 +21,13 @@ Machine Learning / Data Science Intern at Gestalt Diagnostics
 Research Assistant at the Gonzaga University Center for Complex Systems    
 
 ## Research
-**Tree Matching Networks (In Progress)** 
+### Interests
+ - Natural Language Processing, Artificial Intelligence, Machine Learning
+ - Interested in utilizing structure-aware language representation, especially tree-based models that leverage linguistic structure.
+ - Exploring how combining unstructured yet scalable linguistic representation and structured linguistic representation can improve efficiency, interpretability, and safety in AI systems.
+
+### Working on now
+**Tree Matching Networks** 
   - Developing graph neural network architecture for natural language inference using dependency parse trees. 
   - Demonstrates that explicit structural encoding outperforms transformer baselines at small scales. 
   - Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
@@ -40,5 +46,9 @@ I helped organize one of the largest online communities in Gonzaga University hi
 ## Education
 **MS Computer Science** - Eastern Washington University (2024-2026)    
 **BS Computer Science & Mathematics** - Gonzaga University (2019-2023)
+
+
+## Publications and Preprints
+Lunder, J. (2025). _Tree Matching Networks for Natural Language Inference: Parameter-Efficient Semantic Understanding via Dependency Parse Trees._ In preparation.
 
 
