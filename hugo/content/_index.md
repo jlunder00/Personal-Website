@@ -21,7 +21,10 @@ Machine Learning / Data Science Intern at Gestalt Diagnostics
 Research Assistant at the Gonzaga University Center for Complex Systems    
 
 ## Research
-**Tree Matching Networks (In Progress)** - Developing graph neural network architecture for natural language inference using dependency parse trees. Demonstrates that explicit structural encoding outperforms transformer baselines at small scales. Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
+**Tree Matching Networks (In Progress)** 
+  - Developing graph neural network architecture for natural language inference using dependency parse trees. 
+  - Demonstrates that explicit structural encoding outperforms transformer baselines at small scales. 
+  - Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
 
 ## Projects
 I build models and infrastructure for machine learning systems, including:    
