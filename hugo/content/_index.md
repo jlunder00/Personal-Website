@@ -28,15 +28,15 @@ Research Assistant at the Gonzaga University Center for Complex Systems
 
 ### Working on now
 **Tree Matching Networks**     
-  - Developing graph neural network architecture for natural language inference using dependency parse trees.    
-  - Demonstrates that explicit structural encoding outperforms transformer baselines at small scales.    
-  - Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
+ - Developing graph neural network architecture for natural language inference using dependency parse trees.    
+ - Demonstrates that explicit structural encoding outperforms transformer baselines at small scales.    
+ - Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
 
 ## Projects
 I build models and infrastructure for machine learning systems, including:    
-  - A system for determining if an invention is novel in the context of all patents    
-  - A system of various CV models for assisting pathologists diagnosing cancer    
-  - A novel lemma dependency tree based machine translation model    
+ - A system for determining if an invention is novel in the context of all patents    
+ - A system of various CV models for assisting pathologists diagnosing cancer    
+ - A novel lemma dependency tree based machine translation model    
 
 I led the Gonzaga Robotics Computer Science and Machine Learning team in designing and developing a control system for a mars rover    
 I contributed to the 2022 ACROBAT Grand Challenge winning image registration model for histology images      
