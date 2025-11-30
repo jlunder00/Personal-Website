@@ -6,19 +6,15 @@ draft: false
 ## Jason Lunder
 [jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [CV](/Jason_Lunder_CV.pdf)    
 Founding Software/ML Engineer at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [console.intellipat.ai](https://console.intellipat.ai)\)    
+Master's Student at Eastern Washington University    
+    
 
 At Intellipat, I build AI and software systems for patents and intellectual property law.    
 
 I graduated from Gonzaga University with a BS in Computer Science and a BS in Mathematics in 2023.    
 During my undergrad, I worked as a Machine Learning/Data Science intern at Gestalt Diagnostics.    
 I am currently pursuing a MS in Computer Science at Eastern Washington University, defending my thesis Winter 2026.    
-In my spare time, I work on a variety of projects in NLP, CV, and other areas of ML/AI, including at [Parsimony](https://p7y.ai)       
-
-## Experience
-Founding Software/ML Engineer at Intellipat Inc. / Pangeon Corp.     
-Team Lead at Parsimony    
-Machine Learning / Data Science Intern at Gestalt Diagnostics    
-Research Assistant at the Gonzaga University Center for Complex Systems    
+In my spare time, I work on a variety of projects in NLP and other areas of ML/AI, including at [Parsimony](https://p7y.ai)       
 
 ## Research
 ### Interests
@@ -34,6 +30,12 @@ Research Assistant at the Gonzaga University Center for Complex Systems
 
 ### Publications and Preprints
 Lunder, J. (2025). _Tree Matching Networks for Natural Language Inference: Parameter-Efficient Semantic Understanding via Dependency Parse Trees._ In preparation.
+
+## Experience
+Founding Software/ML Engineer at Intellipat Inc. / Pangeon Corp.     
+Team Lead at Parsimony    
+Machine Learning / Data Science Intern at Gestalt Diagnostics    
+Research Assistant at the Gonzaga University Center for Complex Systems    
 
 ## Projects
 I build models and infrastructure for machine learning systems, including:    
