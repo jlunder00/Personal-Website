@@ -27,11 +27,13 @@ Research Assistant at the Gonzaga University Center for Complex Systems
  - Exploring how combining unstructured yet scalable linguistic representation and structured linguistic representation can improve efficiency, interpretability, and safety in AI systems.
 
 ### Working on now
-**Tree Matching Networks**     
-    
- - Developing graph neural network architecture for natural language inference using dependency parse trees.    
+#### Tree Matching Networks**     
+ - Adapting graph neural network architecture for natural language inference using dependency parse trees.    
  - Demonstrates that explicit structural encoding outperforms transformer baselines at small scales.    
  - Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
+
+### Publications and Preprints
+Lunder, J. (2025). _Tree Matching Networks for Natural Language Inference: Parameter-Efficient Semantic Understanding via Dependency Parse Trees._ In preparation.
 
 ## Projects
 I build models and infrastructure for machine learning systems, including:    
@@ -50,7 +52,5 @@ I helped organize one of the largest online communities in Gonzaga University hi
 **BS Computer Science & Mathematics** - Gonzaga University (2019-2023)
 
 
-## Publications and Preprints
-Lunder, J. (2025). _Tree Matching Networks for Natural Language Inference: Parameter-Efficient Semantic Understanding via Dependency Parse Trees._ In preparation.
 
 
