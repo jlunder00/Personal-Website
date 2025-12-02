@@ -29,7 +29,7 @@ In my spare time, I work on a variety of projects in NLP and other areas of ML/A
  - Master's thesis (Winter 2026) investigates self-attention aggregation to address known scaling challenges in structure-based approaches.       
 
 ### Publications and Preprints
-Lunder, J. (2025). _Tree Matching Networks for Natural Language Inference: Parameter-Efficient Semantic Understanding via Dependency Parse Trees._ In preparation.
+Lunder, J. (2025). _Tree Matching Networks for Natural Language Inference: Parameter-Efficient Semantic Understanding via Dependency Parse Trees._ arXiv preprint arXiv:2512.00204. [https://arxiv.org/abs/2512.00204](https://arxiv.org/abs/2512.00204)
 
 ## Experience
 Founding Software/ML Engineer at Intellipat Inc. / Pangeon Corp.     
