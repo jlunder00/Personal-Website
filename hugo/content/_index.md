@@ -4,7 +4,7 @@ date: 2024-11-28T00:00:00-07:00
 draft: false
 ---
 ## Jason Lunder
-[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [CV](/Jason_Lunder_CV.pdf)    
+[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [CV](/Jason_Lunder_CV.pdf) | [blog](/post/)
 Founding Software/ML Engineer at Intellipat Inc. \([intellipat.ai](https://intellipat.ai) & [console.intellipat.ai](https://console.intellipat.ai)\)    
 Master's Student at Eastern Washington University    
     

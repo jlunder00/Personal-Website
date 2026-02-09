@@ -1,3 +1,33 @@
 baseURL = 'https://jasonlunder.com'
 languageCode = "en-us"
+title = "Jason Lunder"
 theme = 'ananke'
+
+enableRobotsTXT = true
+Paginate = 10
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  description = "ML/AI engineer and researcher. arXiv published. Building tree-based NLP architectures and production ML systems."
+  env = "production"
+  show_reading_time = true
+  github = "https://github.com/jlunder00"
+  linkedin = "https://www.linkedin.com/in/jason-l-736516113/"
+  background_color_class = "bg-black"
+  body_classes = "avenir bg-near-white"
+  author = "Jason Lunder"
+
+# Navigation menu
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/post/"
+  weight = 2
