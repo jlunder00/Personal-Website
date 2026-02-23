@@ -27,6 +27,7 @@ enableRobotsTXT = true
   background_color_class = "bg-black"
   body_classes = "avenir bg-near-white"
   author = "Jason Lunder"
+  custom_css = ["css/custom.css"]
 
 # Navigation menu
 [[menu.main]]

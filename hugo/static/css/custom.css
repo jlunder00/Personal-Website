@@ -1,0 +1,10 @@
+/* Widen content areas */
+.measure-wide {
+  max-width: 52em;
+}
+.mw7 {
+  max-width: 56rem;
+}
+.mw8 {
+  max-width: 72rem;
+}
