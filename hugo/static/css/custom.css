@@ -1,11 +1,3 @@
-/* Left-align homepage body text, lists, and paragraphs */
-.nested-links p,
-.nested-links ul,
-.nested-links ol,
-.nested-links li {
-  text-align: left;
-}
-
 /* Widen content areas */
 .measure-wide {
   max-width: 52em;
