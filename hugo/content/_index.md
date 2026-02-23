@@ -5,7 +5,7 @@ draft: false
 ---
 [jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [CV](/Jason_Lunder_CV.pdf) | [blog](/post/)
 
-Founding Software/ML Engineer at [Intellipat Inc.](https://intellipat.ai)
+Founding Software/ML Engineer at [Intellipat Inc.](https://intellipat.ai)<br>
 Master's Student at Eastern Washington University
 
 I build AI and software systems for patents and intellectual property law. I graduated from Gonzaga University with a BS in Computer Science and a BS in Mathematics in 2023, and I am currently pursuing an MS in Computer Science at Eastern Washington University, defending my thesis Winter 2026.
@@ -24,9 +24,9 @@ Adapting graph neural network architecture for natural language inference using 
 
 ## Experience
 
-Founding Software/ML Engineer at Intellipat Inc. / Pangeon Corp.
-Team Lead at [Parsimony](https://p7y.ai)
-Machine Learning / Data Science Intern at Gestalt Diagnostics
+Founding Software/ML Engineer at Intellipat Inc. / Pangeon Corp.<br>
+Team Lead at [Parsimony](https://p7y.ai)<br>
+Machine Learning / Data Science Intern at Gestalt Diagnostics<br>
 Research Assistant at the Gonzaga University Center for Complex Systems
 
 ## Projects
@@ -37,5 +37,5 @@ I led the Gonzaga Robotics CS and ML team in designing a control system for a ma
 
 ## Education
 
-**MS Computer Science** - Eastern Washington University (2024-2026)
+**MS Computer Science** - Eastern Washington University (2024-2026)<br>
 **BS Computer Science & Mathematics** - Gonzaga University (2019-2023)
