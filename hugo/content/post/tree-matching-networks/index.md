@@ -25,15 +25,27 @@ A standard NLP pipeline treats a sentence as a sequence of tokens. A dependency 
 
 Take the sentence *"The cat sat on the mat."* As a token sequence, the model sees six tokens in order. As a dependency tree, it sees that *sat* is the root, *cat* is its subject (nsubj), *mat* is the object of the preposition, and *the* modifies both nouns. The hierarchical relationships are explicit.
 
-```
-        sat (ROOT)
-       /    \
-    cat      on
-    |        |
-   The      mat
-             |
-            the
-```
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" style="max-width:360px;margin:1.5em auto;display:block;font-family:monospace;font-size:16px;">
+  <!-- edges -->
+  <line x1="180" y1="38" x2="100" y2="98" stroke="#555" stroke-width="1.5"/>
+  <line x1="180" y1="38" x2="260" y2="98" stroke="#555" stroke-width="1.5"/>
+  <line x1="100" y1="118" x2="100" y2="158" stroke="#555" stroke-width="1.5"/>
+  <line x1="260" y1="118" x2="260" y2="158" stroke="#555" stroke-width="1.5"/>
+  <line x1="260" y1="178" x2="260" y2="218" stroke="#555" stroke-width="1.5"/>
+  <!-- nodes -->
+  <text x="180" y="30" text-anchor="middle" font-weight="bold" fill="#333">sat (ROOT)</text>
+  <text x="100" y="112" text-anchor="middle" fill="#333">cat</text>
+  <text x="260" y="112" text-anchor="middle" fill="#333">on</text>
+  <text x="100" y="172" text-anchor="middle" fill="#333">The</text>
+  <text x="260" y="172" text-anchor="middle" fill="#333">mat</text>
+  <text x="260" y="232" text-anchor="middle" fill="#333">the</text>
+  <!-- edge labels -->
+  <text x="132" y="60" text-anchor="middle" font-size="11" fill="#888">nsubj</text>
+  <text x="228" y="60" text-anchor="middle" font-size="11" fill="#888">prep</text>
+  <text x="86" y="142" text-anchor="end" font-size="11" fill="#888">det</text>
+  <text x="274" y="142" text-anchor="start" font-size="11" fill="#888">pobj</text>
+  <text x="274" y="202" text-anchor="start" font-size="11" fill="#888">det</text>
+</svg>
 
 This representation isn't new; dependency parsing has been a core NLP tool for decades. What's new here is using these trees as the *input representation* for a neural network designed to compare sentence pairs, rather than using them as a feature extraction step or auxiliary training signal.
 

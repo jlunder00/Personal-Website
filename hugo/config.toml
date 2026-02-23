@@ -8,6 +8,11 @@ enableRobotsTXT = true
 [pagination]
   pagerSize = 10
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
