@@ -4,7 +4,9 @@ title = "Jason Lunder"
 theme = 'ananke'
 
 enableRobotsTXT = true
-Paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [sitemap]
   changefreq = "monthly"
