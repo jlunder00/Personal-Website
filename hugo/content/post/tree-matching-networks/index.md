@@ -1,23 +1,23 @@
 ---
 title: "Tree Matching Networks: What If We Gave Neural Networks the Parse Tree Instead?"
 date: 2026-02-08
-description: "How encoding sentences as dependency trees and matching them with graph neural networks can outperform BERT baselines on natural language inference -- with a fraction of the parameters."
+description: "How encoding sentences as dependency trees and matching them with graph neural networks achieves 75.20% on SNLI versus a BERT baseline at 35.38%, both trained from scratch on a single GPU."
 tags: ["NLP", "deep learning", "graph neural networks", "research"]
 show_reading_time: true
 draft: true
 ---
 
-When we feed text to a transformer, the model has to figure out the structure of language entirely from data. Subject-verb relationships, modifier scope, negation boundaries -- all of it must be learned implicitly from millions (or billions) of examples. But what if we just... told the model the structure upfront?
+When we feed text to a transformer, the model has to figure out the structure of language entirely from data. Subject-verb relationships, modifier scope, negation boundaries: all of it must be learned implicitly from millions (or billions) of examples. But what if we just... told the model the structure upfront?
 
-That's the core idea behind [Tree Matching Networks](https://arxiv.org/abs/2512.00204) (TMN), my recent research exploring whether dependency parse trees can serve as an efficient structural prior for natural language inference. The short version: a graph neural network operating on parse trees significantly outperformed a BERT baseline of comparable size on the SNLI benchmark -- while being trained on a single GPU.
+That's the core idea behind [Tree Matching Networks](https://arxiv.org/abs/2512.00204) (TMN), my recent research exploring whether dependency parse trees can serve as an efficient structural prior for natural language inference. The short version: a graph neural network operating on parse trees achieved 75.20% accuracy on the SNLI benchmark versus 35.38% for a BERT baseline of comparable size, both trained from scratch on the same data and the same hardware.
 
 This post walks through the motivation, architecture, and what I think it means for the field.
 
 ## The question behind the question
 
-Transformers work. That's not in dispute. But *why* they work -- and specifically, *what* structural information they're learning internally -- is still an active area of research. Attention patterns in BERT have been shown to loosely correspond to dependency relations ([Clark et al., 2019](https://aclanthology.org/W19-4828/)), suggesting the model spends some of its capacity rediscovering linguistic structure that we already know how to extract.
+Transformers work. That's not in dispute. But *why* they work, and specifically what structural information they're learning internally, is still an active area of research. Attention patterns in BERT have been shown to loosely correspond to dependency relations ([Clark et al., 2019](https://aclanthology.org/W19-4828/)), suggesting the model spends some of its capacity rediscovering linguistic structure that we already know how to extract.
 
-This raises a practical question: if we hand the model that structure explicitly, can we get comparable performance with less compute? Not as a replacement for transformers, but as a way to understand what they're actually doing -- and whether there's a more efficient path.
+This raises a practical question: if we hand the model that structure explicitly, can we get comparable performance with less compute? Not as a replacement for transformers, but as a way to understand what they're actually doing and whether there's a more efficient path.
 
 ## From tokens to trees
 
@@ -35,7 +35,7 @@ Take the sentence *"The cat sat on the mat."* As a token sequence, the model see
             the
 ```
 
-This representation isn't new -- dependency parsing has been a core NLP tool for decades. What's new is using these trees as the *input representation* for a neural network designed to compare sentence pairs, rather than using them as a feature extraction step or auxiliary training signal.
+This representation isn't new; dependency parsing has been a core NLP tool for decades. What's new here is using these trees as the *input representation* for a neural network designed to compare sentence pairs, rather than using them as a feature extraction step or auxiliary training signal.
 
 ## Architecture: adapting graph matching for language
 
@@ -45,7 +45,7 @@ The architecture has three main components:
 
 **1. Node and edge encoding.** Each word in the parse tree becomes a node with an initial embedding. Dependency relation labels (nsubj, dobj, amod, etc.) become edge features. This gives the network both semantic (what the word means) and syntactic (how it relates to other words) information from the start.
 
-**2. Message-passing propagation.** Nodes iteratively update their representations by aggregating information from their neighbors in the tree. After several rounds of propagation, each node's representation encodes not just its own meaning, but its structural context -- a verb "knows" about its subject and object, a modifier "knows" what it modifies. This is the core GNN mechanism: local structure gets encoded into node states through repeated message passing.
+**2. Message-passing propagation.** Nodes iteratively update their representations by aggregating information from their neighbors in the tree. After several rounds of propagation, each node's representation encodes not just its own meaning but its structural context: a verb knows about its subject and object, a modifier knows what it modifies. This is the core GNN mechanism: local structure gets encoded into node states through repeated message passing.
 
 **3. Cross-graph matching.** For comparing two sentences (as required for natural language inference), TMN computes attention-weighted correspondences between nodes across the two trees. This cross-graph attention allows the model to align semantically similar subtrees between the premise and hypothesis, then aggregate these alignments into a final similarity score.
 
@@ -55,7 +55,7 @@ One of the practical constraints of this research was compute: a single NVIDIA R
 
 **Multi-stage contrastive learning.** Rather than jumping straight to 3-class NLI classification (entailment, neutral, contradiction), TMN uses a staged approach:
 
-1. **Pretraining with InfoNCE contrastive loss** on sentence pairs from WikiQS and AmazonQA (~7M sentences). This teaches the model basic semantic similarity -- push similar sentences together, dissimilar ones apart.
+1. **Pretraining with InfoNCE contrastive loss** on sentence pairs from WikiQS and AmazonQA (~7M sentences). This teaches the model basic semantic similarity: push similar sentences together, dissimilar ones apart.
 
 2. **Primary training with multi-objective InfoNCE** on SNLI's 550K labeled pairs. Instead of hard classification, this stage uses a softer objective: entailed pairs should be more similar than neutral pairs, which should be more similar than contradictory pairs. The relative ordering matters more than absolute boundaries.
 
@@ -63,35 +63,38 @@ This staged approach creates a smoother learning curve that works within the con
 
 **Why InfoNCE specifically?** It's well-understood for embedding tasks, works naturally with the similarity-based framing of NLI, and extends cleanly to the multi-class setting. The multi-objective variant lets us express the three-way relationship (entailment > neutral > contradiction in similarity) without forcing hard decision boundaries during training.
 
-<!--
-TODO: UPDATE THIS SECTION WITH FINAL RESULTS FROM UPDATED PAPER
 ## Results
 
-[Insert updated results table and discussion here once paper experiments are finalized.
-Key points to cover:
-- TMN vs BERT baseline comparison at various parameter budgets
-- Updated scaling curve findings
-- What the scaling behavior tells us about where the bottleneck is]
--->
+The primary comparison: TreeMatchingNet (36M parameters) achieves 75.20% accuracy on the SNLI test set. BertMatchingNet (41M parameters, trained identically from scratch) achieves 35.38%, just above the 33.33% random baseline.
+
+An important caveat up front: neither model is pretrained on large corpora. The comparison is controlled by design, isolating structural inductive bias rather than pretraining data. The BERT baseline here is not standard pretrained BERT; it is BERT trained from scratch on the same ~7M sentences as TMN. This makes the comparison fairer for understanding what architecture contributes, but it means absolute accuracy numbers shouldn't be read against production systems.
+
+**The BERT failure mode** is worth understanding. BertMatchingNet doesn't simply underperform; it predicts Entailment for every test example, achieving 100% recall on that class and 0% on the other two. When we remove the cross-graph attention and train BertEmbeddingNet (which processes sentences independently), BERT recovers to 45.78% and learns non-trivial class distinctions. This suggests the cross-attention mechanism specifically is interfering with BERT's learning under the randomized pairing regime used during pretraining, rather than the training protocol generally.
+
+TMN responds differently. TreeEmbeddingNet (without cross-graph attention) reaches 57.57%, while TreeMatchingNet (with cross-graph attention) reaches 75.20%, a gap of 17.6 percentage points. The GNN-based matching architecture appears compatible with this regime in a way the transformer-based approach is not.
+
+**Scaling** across three model sizes shows consistent improvement: Small (1M params, 60.53%), Medium (19M params, 68.81%), Large (36M params, 75.20%). Gains per additional parameter decrease at larger scales, consistent with the aggregation bottleneck described below. It is also consistent with a broader pattern in the literature: transformer models follow reliable power-law scaling with parameters and compute ([Kaplan et al., 2020](https://arxiv.org/abs/2001.08361)), whereas structure-based feedforward architectures have not been shown to do the same. TMN improves with scale, but the results here don't provide evidence the trend would continue at much larger scales.
+
+TMN also transfers to a different task with no additional training. On the SemEval semantic textual similarity benchmark, TMN matching achieves a Pearson correlation of 0.716. BertMatchingNet achieves 0.003 on the same task. The structural representations generalize across tasks, which is at least consistent with the model encoding something about sentence relationships rather than surface patterns.
 
 ## The aggregation bottleneck
 
-Regardless of the specific numbers, one architectural insight has held up across experiments: the bottleneck in this architecture isn't in the propagation step (how nodes exchange information within a tree) but in the aggregation step (how node-level representations get combined into a sentence-level embedding).
+One architectural finding has held up consistently: the bottleneck in this architecture appears to be in the aggregation step (how node-level representations get combined into a sentence-level embedding) rather than in the propagation step (how nodes exchange information within the tree).
 
-The current approach uses mean pooling -- averaging all node representations -- which likely throws away structural information that the propagation step worked hard to encode. If a verb node "knows" about its subject and object through message passing, but then gets averaged together with every other node equally, you lose the hierarchical signal.
+The current implementation uses weighted pooling, collapsing all node representations into a single sentence embedding. If a verb node has learned about its subject and object through message passing, that information gets averaged together with every other node equally, potentially losing the hierarchical signal the propagation worked to encode.
 
-My thesis work (in progress) investigates replacing mean pooling with multi-headed self-attention aggregation, essentially using a small transformer as the aggregation function. The hypothesis: more expressive aggregation can unlock the potential of the structural representations by preserving the information that message passing captures, rather than collapsing it into a flat average.
+My thesis work investigates replacing this with multi-headed self-attention aggregation: essentially using a small transformer as the aggregation function. The hypothesis is that more expressive aggregation could better preserve what the message-passing step captures, rather than collapsing it into a flat average.
 
 ## What this means (and what it doesn't)
 
 **What it means:**
-- Explicit structural encoding provides a strong inductive bias, especially at smaller scales. When you don't have billions of parameters to spend on implicitly learning structure, giving the model structure directly helps.
-- There's a real question about what transformers learn vs. what could be provided upfront. Parse trees encode genuine linguistic knowledge that otherwise must be extracted from data.
-- Resource-efficient approaches can produce meaningful results. Not everything needs a GPU cluster.
+- Explicit structural encoding provides a useful inductive bias at small scales. When you can't afford to spend billions of parameters on implicitly learning structure, providing it directly appears to help.
+- There's a genuine question about what transformers learn versus what could be provided upfront. Parse trees encode linguistic knowledge that otherwise must be extracted from data.
+- Controlled comparisons at moderate scale can still be informative, even on a single consumer GPU.
 
 **What it doesn't mean:**
-- Trees will replace transformers. They won't. The scaling properties of attention are well-demonstrated.
-- Structure-based approaches are ready for production. This is research exploring a specific hypothesis about the role of structure in language understanding.
+- Trees will replace transformers. They won't. Transformer models follow consistent scaling laws that structure-based feedforward architectures don't appear to match ([Kaplan et al., 2020](https://arxiv.org/abs/2001.08361)). The advantage shown here at moderate scales may not hold as parameters grow into the billions.
+- Structure-based approaches are production-ready. This is research exploring a specific hypothesis about the role of structure in language understanding, under constrained conditions.
 
 ## Where this goes next
 
@@ -101,7 +104,7 @@ The immediate next step is the self-attention aggregation experiments for my the
 2. Run GNN propagation to produce structure-aware node representations
 3. Feed those representations (instead of token embeddings) into a transformer
 
-After propagation, the node states are essentially enriched token embeddings -- they carry the same kind of information, plus explicit structural context. The question is whether starting from structurally-informed representations lets you train a smaller or more efficient transformer.
+After propagation, the node states are enriched token embeddings; they carry the same kind of information as standard embeddings, plus explicit structural context. The question is whether starting from structurally-informed representations lets you train a smaller or more efficient transformer.
 
 Testing this properly requires compute beyond what's available for a master's thesis. But the TMN results suggest the structural prior has real value, and figuring out how to combine it with the scaling properties of transformers seems like a question worth pursuing.
 
@@ -109,7 +112,7 @@ Testing this properly requires compute beyond what's available for a master's th
 
 The code is available on [GitHub](https://github.com/jlunder00/Tree-Matching-Networks), and the paper is on [arXiv](https://arxiv.org/abs/2512.00204).
 
-If you have questions or want to discuss tree-based NLP approaches, feel free to reach out -- I'm always happy to talk about this stuff.
+If you have questions or want to discuss tree-based NLP approaches, feel free to reach out.
 
 ---
 
