@@ -31,13 +31,11 @@ Research Assistant at the Gonzaga University Center for Complex Systems
 
 ## Projects
 
+[Tether](https://github.com/jlunder00/tether) — Open-source agentic AI task management and planning application. Client/server architecture with agentic AI integration for intelligent task orchestration. Licensed under AGPL-3.0.
+
 I build models and infrastructure for machine learning systems, including a system for determining if an invention is novel in the context of all patents, a system of various CV models for assisting pathologists diagnosing cancer, and a novel lemma dependency tree based machine translation model.
 
 I led the Gonzaga Robotics CS and ML team in designing a control system for a mars rover. I contributed to the 2022 ACROBAT Grand Challenge winning image registration model for histology images. I developed an RPA based system for automating IT processes at Lynden Inc.
-
-### [Tether](https://github.com/jlunder00/tether)
-
-Open-source agentic AI task management and planning application. Client/server architecture with agentic AI integration for intelligent task orchestration. Licensed under AGPL-3.0.
 
 ## Education
 
