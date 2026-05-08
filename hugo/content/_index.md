@@ -31,7 +31,7 @@ Research Assistant at the Gonzaga University Center for Complex Systems
 
 ## Projects
 
-[Tether](https://github.com/jlunder00/tether) — Open-source agentic AI task management and planning application. Client/server architecture with agentic AI integration for intelligent task orchestration. Licensed under AGPL-3.0.
+[Tether](https://github.com/jlunder00/tether), An open-source agentic AI task management and planning application. Client/server architecture with agentic AI integration for intelligent task orchestration. Licensed under AGPL-3.0.
 
 I build models and infrastructure for machine learning systems, including a system for determining if an invention is novel in the context of all patents, a system of various CV models for assisting pathologists diagnosing cancer, and a novel lemma dependency tree based machine translation model.
 
