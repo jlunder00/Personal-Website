@@ -3,7 +3,7 @@ Title: "Jason Lunder"
 date: 2024-11-28T00:00:00-07:00
 draft: false
 ---
-[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [CV](/Jason_Lunder_CV.pdf) | [blog](/post/)
+[jason.lunder@pangeon.com](mailto:jason.lunder@pangeon.com) | [github](https://github.com/jlunder00) | [linkedin](https://www.linkedin.com/in/jason-l-736516113/) | [Resume](/Jason_Lunder_Resume.pdf) | [CV](/Jason_Lunder_CV.pdf) | [blog](/post/)
 
 Founding Software/ML Engineer at [Intellipat Inc.](https://intellipat.ai)<br>
 Master's Student at Eastern Washington University
@@ -30,6 +30,8 @@ Machine Learning / Data Science Intern at Gestalt Diagnostics<br>
 Research Assistant at the Gonzaga University Center for Complex Systems
 
 ## Projects
+
+[Tether](https://github.com/jlunder00/tether), An open-source agentic AI task management and planning application. Client/server architecture with agentic AI integration for intelligent task orchestration. Licensed under AGPL-3.0.
 
 I build models and infrastructure for machine learning systems, including a system for determining if an invention is novel in the context of all patents, a system of various CV models for assisting pathologists diagnosing cancer, and a novel lemma dependency tree based machine translation model.
 
